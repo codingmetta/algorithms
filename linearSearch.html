@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+
+//let A = [5,2,2,4,6,1,3];
+let A = [5,2,4,6,1,3,45,1123,4,99,8,457,32];
+let existingValue = 45;
+let falseValue = 66;
+let firstResult;
+let secondResult;  
+
+firstResult = linearSearch(A,existingValue);
+//should return index 6 for value 45
+console.log(firstResult);
+
+
+secondResult= linearSearch(A,falseValue);
+//should return null
+console.log(secondResult);
+
+
+
+function linearSearch(inputArr,v){
+    let n = inputArr.length;
+    let result = null;
+    for (let j=0; j<n; j++){
+        let currentKey = inputArr[j];
+        if (currentKey == v){
+            return result =j;
+        }  
+    }
+    return result;
+}
+
+
+</script>
+</body>
+</html>
