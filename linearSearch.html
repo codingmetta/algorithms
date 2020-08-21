@@ -8,17 +8,14 @@
 let A = [5,2,4,6,1,3,45,1123,4,99,8,457,32];
 let existingValue = 45;
 let falseValue = 66;
-let firstResult;
-let secondResult;  
+let firstResult; 
 
 firstResult = linearSearch(A,existingValue);
 //should return index 6 for value 45
 console.log(firstResult);
 
-
-secondResult= linearSearch(A,falseValue);
 //should return null
-console.log(secondResult);
+console.log(linearSearch(A,falseValue));
 
 
 
