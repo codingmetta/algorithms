@@ -4,8 +4,9 @@
 
 <script>
 
-let A = [5,2,2,4,6,1,3]; 
-insertionSort(A);
+//let A = [5,2,2,4,6,1,3];
+let A = [5,2,2,4,6,1,3,45,1123,4,99,8,457,32];  
+insertionSortDesc(A);
 console.log(A);
 
 function insertionSort(inputArr){
@@ -14,6 +15,20 @@ function insertionSort(inputArr){
         let currentKey = inputArr[j];
         let i = j-1;
         while (i>=0 && inputArr[i]>currentKey){
+            inputArr[i+1] = inputArr[i];
+            i = i-1;
+        }
+        inputArr[i+1]= currentKey;
+    }
+    return inputArr;
+}
+
+function insertionSortDesc(inputArr){
+    let n = inputArr.length;
+    for(let j=1; j<n; j++){
+        let currentKey=inputArr[j];
+        let i = j-1;
+        while (i>=0 && inputArr[i]<currentKey){
             inputArr[i+1] = inputArr[i];
             i = i-1;
         }
