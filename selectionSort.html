@@ -14,18 +14,21 @@ function selectionSort(inputArr){
     let lowestKey= null;
     let position= null;
     let k = 0;
-    for (let j=0; j<n; j++){
-        let currentKey = inputArr[j];
-        let comparisonKey = inputArr[j+1];
-        if (currentKey > comparisonKey){
-            lowestKey = comparisonKey;
-            position =j+1;
-        } else if (j == n-1){
-            inputArr[position]=inputArr[k];
-            inputArr[k]=lowestKey;
-            k++;
+    while(k<n){
+        for (let j=0; j<n; j++){
+            let currentKey = inputArr[j];
+            let comparisonKey = inputArr[j+1];
+            if (currentKey > comparisonKey){
+                lowestKey = comparisonKey;
+                position =j+1;
+            } else if (j == n-1){
+                inputArr[position]=inputArr[k];
+                inputArr[k]=lowestKey;
+                k++;
+            }
         }
-    }
+        j=k;
+    } 
     return inputArr;
 }
 
